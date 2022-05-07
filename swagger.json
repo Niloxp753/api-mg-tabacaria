@@ -11,12 +11,12 @@
   },
   "servers": [
     {
-      "url": "http//localhost:3000/essencias",
-      "description": "API de teste"
+      "url": "https://apimbtabacaria-blue.onrender.com/essencias",
+      "description": "API de produção Render"
     },
     {
-      "url": "https://apimbtabacaria-blue.onrender.com/",
-      "description": "API de produção"
+      "url": "http//localhost:3000/essencias",
+      "description": "API de teste"
     }
   ],
 
