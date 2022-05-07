@@ -1,0 +1,237 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API MGTabacaria",
+    "description": "API para CRUD de essencias de narguile para tabacaria",
+    "termsOfService": "",
+    "contact": {
+      "email": "niloxp.753@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http//localhost:3000/essencias",
+      "description": "API de teste"
+    },
+    {
+      "url": "https://apimbtabacaria-blue.onrender.com/essencias",
+      "description": "API de produção"
+    }
+  ],
+
+  "paths": {
+    "/all-essencias": {
+      "get": {
+        "summary": "Lista de todas as essencias",
+        "description": "Rota responsável por listar todas as essencias",
+        "tags": ["Essencias"],
+        "responses": {
+          "404": {
+            "description": "Not Found"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Essencias"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/one-essencia/{id}": {
+      "get": {
+        "summary": "Busca uma essencia pelo ID",
+        "description": "Rota responsável por buscar uma essencia pelo ID",
+        "tags": ["Essencias"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id da essencia para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Essencias"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/create-essencia": {
+      "post": {
+        "summary": "Cadastrar uma essencia",
+        "description": "Rota responsável por cadastrar uma essencia",
+        "tags": ["Essencias"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Essencias"
+              },
+              "examples": {
+                "Essencias": {
+                  "value": {
+                    "titulo": "Cherry Starburst",
+                    "descricao": "A escolha perfeita para adoçar os sentidos de quem busca por uma essência aromática.",
+                    "foto": "./assets/images/cereja.png",
+                    "preco": 10,
+                    "sabor": "Cereja",
+                    "aroma": "Doce",
+                    "possuiAroma": true,
+                    "front": "./assets/images/cereja-front.png"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Essencias"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/update-essencia/{id}": {
+      "put": {
+        "summary": "Editar uma essencia pelo ID",
+        "description": "Rota responsável por editar uma essencia pelo ID",
+        "tags": ["Essencias"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id da essencia para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Essencias"
+              },
+              "examples": {
+                "Essencias": {
+                  "value": {
+                    "titulo": "Cherry Starburst editado",
+                    "descricao": "A escolha perfeita para adoçar os sentidos de quem busca por uma essência aromática.",
+                    "foto": "./assets/images/cereja.png",
+                    "preco": 10,
+                    "sabor": "Cereja",
+                    "aroma": "Doce",
+                    "possuiAroma": true,
+                    "front": "./assets/images/cereja-front.png"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Essencias"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/delete-essencia/{id}": {
+      "delete": {
+        "summary": "Apagar uma essencia pelo ID",
+        "description": "Rota responsável por apagar uma essencia pelo ID",
+        "tags": ["Essencias"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id da essencia para deleção",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Essencias": {
+        "type": "object",
+        "properties": {
+          "titulo": {
+            "type": "string"
+          },
+          "descricao": {
+            "type": "string"
+          },
+          "foto": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "sabor": {
+            "type": "string"
+          },
+          "aroma": {
+            "type": "string"
+          },
+          "possuiAroma": {
+            "type": "string"
+          },
+          "front": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
