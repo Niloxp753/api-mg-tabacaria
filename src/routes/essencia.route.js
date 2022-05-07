@@ -1,9 +1,15 @@
 const route = require('express').Router();
 const controllerEssencias = require('../controllers/essencia.controller');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('../../swagger.json');
+
 const {
   validId,
   validObjectBody,
 } = require('../middlewares/essencia.middleware');
+
+route.use('/api-docs', swaggerUi.serve);
+route.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 route.get('/all-essencias', controllerEssencias.findAllEssenciasController);
 route.get(
@@ -12,18 +18,18 @@ route.get(
   controllerEssencias.findByIdEssenciaController,
 );
 route.post(
-  '/create',
+  '/create-essencia',
   validObjectBody,
   controllerEssencias.createEssenciaController,
 );
 route.put(
-  '/update/:id',
+  '/update-essencia/:id',
   validId,
   validObjectBody,
   controllerEssencias.updateEssenciaController,
 );
 route.delete(
-  '/delete/:id',
+  '/delete-essencia/:id',
   validId,
   controllerEssencias.deleteEssenciaController,
 );
