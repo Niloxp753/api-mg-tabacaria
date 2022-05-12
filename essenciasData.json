@@ -5,8 +5,6 @@
     "foto": "./assets/images/cereja.png",
     "preco": 10.0,
     "sabor": "Cereja",
-    "aroma": "Doce",
-    "possuiAroma": true,
     "front": "./assets/images/cereja-front.png"
   },
   {
@@ -15,8 +13,6 @@
     "foto": "./assets/images/maracuja.png",
     "preco": 10.0,
     "sabor": "Maracujá",
-    "aroma": "cítrico",
-    "possuiAroma": true,
     "front": "./assets/images/maracuja-front.png_"
   },
   {
@@ -25,7 +21,6 @@
     "foto": "./assets/images/framboesa.png",
     "preco": 7.0,
     "sabor": "Framboesa",
-    "possuiAroma": false,
     "front": "./assets/images/framboesa-front.png"
   },
   {
@@ -34,8 +29,6 @@
     "foto": "./assets/images/menta.png",
     "preco": 10.0,
     "sabor": "Menta",
-    "aroma": "Refrescante",
-    "possuiAroma": true,
     "front": "./assets/images/menta-front.png"
   },
   {
@@ -44,7 +37,6 @@
     "foto": "./assets/images/laranjacomacerola.png",
     "preco": 7.0,
     "sabor": "Laranja e Acerola",
-    "possuiAroma": false,
     "front": "./assets/images/laranjacomacerola-front.png"
   },
   {
@@ -53,7 +45,6 @@
     "foto": "./assets/images/limao.png",
     "preco": 7.0,
     "sabor": "Limão",
-    "possuiAroma": false,
     "front": "./assets/images/limao-front.png"
   },
   {
@@ -62,8 +53,6 @@
     "foto": "./assets/images/tangerina.png",
     "preco": 10.0,
     "sabor": "Tangerina",
-    "aroma": "Refrescante",
-    "possuiAroma": true,
     "front": "./assets/images/tangerina-front.png"
   },
   {
@@ -72,7 +61,6 @@
     "foto": "./assets/images/acaiecatuaba.png",
     "preco": 7.0,
     "sabor": "Açai e Catuaba",
-    "possuiAroma": false,
     "front": "./assets/images/acaiecatuaba-front.png"
   },
   {
@@ -81,8 +69,6 @@
     "foto": "./assets/images/frutascitricas.png",
     "preco": 10.0,
     "sabor": "Frutas Cítricas",
-    "aroma": "Cítrico",
-    "possuiAroma": true,
     "front": "./assets/images/frutascitricas-front.png"
   },
   {
@@ -91,7 +77,6 @@
     "foto": "./assets/images/cafe.png",
     "preco": 7.0,
     "sabor": "Café",
-    "possuiAroma": false,
     "front": "./assets/images/cafe-front.png"
   },
   {
@@ -100,7 +85,6 @@
     "foto": "./assets/images/tuttifrutti.png",
     "preco": 7.0,
     "sabor": "Tutti-Frutti",
-    "possuiAroma": false,
     "front": "./assets/images/tuttifrutti-front.png"
   },
   {
@@ -109,8 +93,6 @@
     "foto": "./assets/images/banana.png",
     "preco": 10.0,
     "sabor": "Banana",
-    "aroma": "Doce e Mentolado",
-    "possuiAroma": true,
     "front": "./assets/images/banana-front.png"
   },
   {
@@ -119,7 +101,6 @@
     "foto": "./assets/images/caju.png",
     "preco": 7.0,
     "sabor": "Caju",
-    "possuiAroma": false,
     "front": "./assets/images/caju-front.png"
   },
   {
@@ -128,7 +109,6 @@
     "foto": "./assets/images/frutasvermelhascomlimao.png",
     "preco": 7.0,
     "sabor": "Frutas Vermelhas com Limão",
-    "possuiAroma": false,
     "front": "./assets/images/frutasvermelhascomlimao-front.png"
   },
   {
@@ -137,8 +117,6 @@
     "foto": "./assets/images/melancia.png",
     "preco": 10.0,
     "sabor": "Melância",
-    "aroma": "Doce e Mentolado",
-    "possuiAroma": true,
     "front": "./assets/images/melancia-front.png"
   },
   {
@@ -147,8 +125,6 @@
     "foto": "./assets/images/yogurt.png",
     "preco": 10.0,
     "sabor": "Yogurt",
-    "aroma": "Doce",
-    "possuiAroma": true,
     "front": "./assets/images/yogurt-front.png"
   },
   {
@@ -157,7 +133,6 @@
     "foto": "./assets/images/uva.png",
     "preco": 7.0,
     "sabor": "Uva",
-    "possuiAroma": false,
     "front": "./assets/images/uva-front.png"
   }
 ]
