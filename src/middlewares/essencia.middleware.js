@@ -18,8 +18,6 @@ const validObjectBody = (req, res, next) => {
     !essencia.foto ||
     !essencia.preco ||
     !essencia.sabor ||
-    !essencia.aroma ||
-    !essencia.possuiAroma ||
     !essencia.front
   ) {
     return res

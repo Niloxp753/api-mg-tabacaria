@@ -96,8 +96,6 @@
                     "foto": "./assets/images/cereja.png",
                     "preco": 10,
                     "sabor": "Cereja",
-                    "aroma": "Doce",
-                    "possuiAroma": true,
                     "front": "./assets/images/cereja-front.png"
                   }
                 }
@@ -150,8 +148,6 @@
                     "foto": "./assets/images/cereja.png",
                     "preco": 10,
                     "sabor": "Cereja",
-                    "aroma": "Doce",
-                    "possuiAroma": true,
                     "front": "./assets/images/cereja-front.png"
                   }
                 }
@@ -219,12 +215,6 @@
             "type": "number"
           },
           "sabor": {
-            "type": "string"
-          },
-          "aroma": {
-            "type": "string"
-          },
-          "possuiAroma": {
             "type": "string"
           },
           "front": {
