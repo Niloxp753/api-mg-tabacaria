@@ -22,12 +22,27 @@ const validObjectBody = (req, res, next) => {
   ) {
     return res
       .status(400)
-      .send({ message: 'Envie todos os campos informados' });
+      .send({ message: 'Envie todos os campos informados!' });
   }
+  next();
+};
+
+const validObjectBodyCarrinho = (req, res, next) => {
+  const carrinho = req.body;
+
+  carrinho.forEach((item) => {
+    if (!item || !item.essenciaId || !item.quantidade) {
+      return res
+        .status(400)
+        .send({ message: 'Envie todos os campos informados!' });
+    }
+  });
+
   next();
 };
 
 module.exports = {
   validId,
   validObjectBody,
+  validObjectBodyCarrinho,
 };
